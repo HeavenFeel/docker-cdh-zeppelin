@@ -12,7 +12,7 @@ RUN chmod 755 /home/cloudera/start-single.sh
 RUN chmod 755 /home/cloudera/stop-all.sh
 
 # Install wget
-RUN yum install -y wget
+RUN yum install -y wget passwd supervisor || true
 
 # JDBC DB2
 ADD ./lib/db2jcc.jar /usr/share/java/db2jcc.jar
